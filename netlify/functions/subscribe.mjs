@@ -13,16 +13,13 @@ export default async (req) => {
   const email = (formData.get('email') || '').toString();
   const whatsapp = (formData.get('whatsapp') || '').toString();
 
-  const apiKey = Netlify.env.get('BREVO_API_KEY');
   const HEADERS = {
-    'api-key': apiKey,
+    'api-key': Netlify.env.get('BREVO_API_KEY'),
     'Content-Type': 'application/json'
   };
 
-  let contactResult = null;
-  let contactError = null;
   try {
-    const r = await fetch(`${BREVO}/contacts`, {
+    await fetch(`${BREVO}/contacts`, {
       method: 'POST',
       headers: HEADERS,
       body: JSON.stringify({
@@ -32,15 +29,12 @@ export default async (req) => {
         updateEnabled: true
       })
     });
-    contactResult = { status: r.status, body: await r.text() };
   } catch (err) {
-    contactError = String(err);
+    console.error('Error guardando contacto:', err);
   }
 
-  let emailResult = null;
-  let emailError = null;
   try {
-    const r2 = await fetch(`${BREVO}/smtp/email`, {
+    await fetch(`${BREVO}/smtp/email`, {
       method: 'POST',
       headers: HEADERS,
       body: JSON.stringify({
@@ -49,18 +43,8 @@ export default async (req) => {
         params: { NOMBRE: nombre }
       })
     });
-    emailResult = { status: r2.status, body: await r2.text() };
   } catch (err) {
-    emailError = String(err);
-  }
-
-  const url = new URL(req.url);
-  if (url.searchParams.get('debug')) {
-    return new Response(JSON.stringify({
-      apiKeyPresent: !!apiKey,
-      apiKeyLength: apiKey ? apiKey.length : 0,
-      contactResult, contactError, emailResult, emailError
-    }, null, 2), { headers: { 'Content-Type': 'application/json' } });
+    console.error('Error enviando email:', err);
   }
 
   return new Response(null, {
