@@ -158,21 +158,18 @@
   .form-group input::placeholder { color: rgba(233,221,195,.35); }
   .form-group input:focus { border-color: var(--oro-md); }
   .form-privacy { font-size: .68rem; color: rgba(233,221,195,.35); text-align: center; margin-top: .85rem; line-height: 1.5; }
-  .form-success { display: none; text-align: center; padding: 1rem 0; }
-  .form-success.is-visible { display: block; }
-  .form-success p:first-child { font-family: 'Michelia', Georgia, serif; font-size: 1.3rem; color: var(--oro-lc); margin-bottom: .5rem; }
-  .form-success p { font-size: .88rem; color: rgba(233,221,195,.8); }
 
   /* ── EVENT META STRIP ── */
   .event-meta {
-    display: flex; flex-wrap: wrap; gap: .5rem 1.5rem;
+    display: flex; flex-wrap: wrap; gap: .6rem 1.75rem;
     justify-content: center;
-    font-size: .82rem;
-    color: rgba(233,221,195,.8);
-    margin-top: 1.25rem;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    font-weight: 700;
+    color: var(--oro-lc);
+    margin: 1.5rem 0;
   }
-  .event-meta span { display: inline-flex; align-items: center; gap: .4rem; }
-  .event-meta .diamond { font-size: .65em; }
+  .event-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+  .event-meta .diamond { font-size: .7em; }
 
   /* ══════════════════════════
      HERO
@@ -255,10 +252,20 @@
     color: var(--oro-lc);
   }
 
+  .hero-photo-mobile { display: none; }
+
   @media (max-width: 900px) {
     #hero { grid-template-columns: 1fr; }
-    .hero-right { min-height: 46vh; order: -1; }
+    .hero-right { display: none; }
     .hero-left { padding: 2.5rem 1.5rem 3rem; max-width: 100%; }
+    .hero-photo-mobile {
+      display: block;
+      margin: 0 0 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(212,184,126,.2);
+    }
+    .hero-photo-mobile img { width: 100%; height: auto; max-height: 46vh; object-fit: cover; object-position: top center; }
   }
 
   /* ══════════════════════════
@@ -417,7 +424,17 @@
     <h1 class="reveal">Cómo dar <em>el primer paso en redes sociales</em> para mostrar lo que ya sabes hacer, sin esperar a sentirte lista</h1>
     <p class="hero-sub reveal">Masterclass <strong>para mujeres con negocios de bienestar</strong> que llevan tiempo postergando la presentación de su servicio, ya sea por miedo a exponerse o por no saber por dónde empezar.</p>
 
-    <form class="form-wrap reveal" id="form-hero" novalidate>
+    <div class="event-meta reveal">
+      <span><span class="diamond">◆</span> Miércoles 19 de agosto</span>
+      <span><span class="diamond">◆</span> 4:30pm Arizona · 6:30pm Colombia</span>
+      <span><span class="diamond">◆</span> En vivo por Zoom</span>
+    </div>
+
+    <div class="hero-photo-mobile reveal">
+      <img src="imagens/Mimi-Ale-1.PNG" alt="Mimi y Ale, fundadoras de Mujer Alquímica Digital">
+    </div>
+
+    <form class="form-wrap reveal" id="form-hero" action="https://el-primer-paso-mad.netlify.app/subscribe" method="POST" novalidate>
       <p class="form-wrap__title">Regístrate, es gratis</p>
       <div class="form-fields">
         <div class="form-group">
@@ -435,17 +452,7 @@
         <button type="submit" class="btn">Quiero mi lugar</button>
         <p class="form-privacy">Tu información está segura. Sin spam, nunca.</p>
       </div>
-      <div class="form-success">
-        <p>¡Listo, tu lugar está apartado!</p>
-        <p>Revisa tu correo, ahí te vamos a enviar los detalles para conectarte.</p>
-      </div>
     </form>
-
-    <div class="event-meta reveal">
-      <span><span class="diamond">◆</span> Miércoles 19 de agosto</span>
-      <span><span class="diamond">◆</span> 4:30pm Arizona · 6:30pm Colombia</span>
-      <span><span class="diamond">◆</span> En vivo por Zoom</span>
-    </div>
   </div>
   <div class="hero-right">
     <img src="imagens/Mimi-Ale-1.PNG" alt="Mimi y Ale, fundadoras de Mujer Alquímica Digital">
@@ -652,15 +659,6 @@
     });
   });
 
-  // Forms (sin backend todavía — placeholder visual)
-  document.querySelectorAll('form[id^="form-"]').forEach(function(form) {
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      if (!form.checkValidity()) { form.reportValidity(); return; }
-      form.querySelector('.form-fields').style.display = 'none';
-      form.querySelector('.form-success').classList.add('is-visible');
-    });
-  });
 </script>
 
 </body>
