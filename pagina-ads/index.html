@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>El Primer Paso · Masterclass gratuita · Mujer Alquímica Digital</title>
+<meta name="description" content="Masterclass en vivo con Mimi y Ale. Cómo dar el primer paso para mostrar lo que ya sabes hacer, sin esperar a sentirte lista. Miércoles 19 de agosto, gratis, por Zoom.">
+<link rel="icon" type="image/png" href="../imagens/icono.png">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1623967308847840');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Microsoft Clarity — Mapa de calor -->
+<script type="text/javascript">
+  (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+  })(window, document, "clarity", "script", "xurp83gbtm");
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+<style>
+  @font-face {
+    font-family: 'Michelia';
+    src: url('../assets/Michelia.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --verde:    #97a585;
+    --azul:     #263549;
+    --azul-md:  #1a2535;
+    --azul-dk:  #0f1a24;
+    --oro-lc:   #f7d795;
+    --oro-md:   #d4b87e;
+    --oro-dk:   #a18348;
+    --crema:    #e9ddc3;
+    --crema-dk: #d3bd8e;
+    --terra:    #a46448;
+    --grad-oro: linear-gradient(135deg, var(--oro-dk), var(--oro-md), var(--oro-lc));
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  img { display: block; max-width: 100%; }
+
+  body {
+    font-family: 'Raleway', sans-serif;
+    background: var(--azul-dk);
+    color: var(--crema);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .michelia { font-family: 'Michelia', Georgia, serif; }
+
+  .gold-text {
+    background: var(--grad-oro);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .label {
+    font-size: .68rem;
+    font-weight: 700;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: var(--oro-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .75rem;
+    margin-bottom: 1.25rem;
+  }
+  .label::before, .label::after {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 32px;
+    background: var(--oro-md);
+    opacity: .5;
+  }
+  .label.left { justify-content: flex-start; }
+  .label.left::before { display: none; }
+
+  .diamond { color: var(--oro-md); font-size: .75em; }
+
+  section { padding: 5.5rem 1.5rem; position: relative; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  .container-narrow { max-width: 720px; margin: 0 auto; }
+
+  h1, h2, h3 { font-family: 'Michelia', Georgia, serif; font-weight: normal; line-height: 1.2; }
+
+  /* ── REVEAL ON SCROLL ── */
+  .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
+  .reveal.is-visible { opacity: 1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { opacity: 1; transform: none; transition: none; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* ── BOTÓN ── */
+  .btn {
+    display: block;
+    width: 100%;
+    background: var(--grad-oro);
+    color: var(--azul-dk);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    font-size: .88rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    padding: 1.15rem 2rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform .2s ease-out, box-shadow .2s ease-out;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+  }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(212,184,126,.32); }
+  .btn:active { transform: translateY(0); }
+  .btn:focus-visible { outline: 2px solid var(--oro-lc); outline-offset: 3px; }
+
+  /* ── FORM ── */
+  .form-wrap {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(212,184,126,.2);
+    border-radius: 8px;
+    padding: 2rem;
+  }
+  .form-wrap__title {
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--oro-md);
+    text-align: center;
+    margin-bottom: 1.4rem;
+  }
+  .form-group { margin-bottom: 1rem; }
+  .form-group label {
+    display: block;
+    font-size: .72rem;
+    letter-spacing: .04em;
+    color: rgba(233,221,195,.75);
+    margin-bottom: .4rem;
+  }
+  .form-group input {
+    width: 100%;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(212,184,126,.25);
+    border-radius: 4px;
+    padding: .9rem 1rem;
+    min-height: 48px;
+    color: var(--crema);
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color .2s;
+  }
+  .form-group input::placeholder { color: rgba(233,221,195,.35); }
+  .form-group input:focus { border-color: var(--oro-md); }
+  .form-privacy { font-size: .68rem; color: rgba(233,221,195,.35); text-align: center; margin-top: .85rem; line-height: 1.5; }
+
+  /* ── EVENT META STRIP ── */
+  .event-meta {
+    display: flex; flex-wrap: wrap; gap: .6rem 1.75rem;
+    justify-content: center;
+    font-size: clamp(1rem, 2.4vw, 1.2rem);
+    font-weight: 700;
+    color: var(--oro-lc);
+    margin: 1.5rem 0;
+  }
+  .event-meta span { display: inline-flex; align-items: center; gap: .5rem; }
+  .event-meta .diamond { font-size: .7em; }
+
+  /* ══════════════════════════
+     HERO
+  ══════════════════════════ */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: stretch;
+    background: var(--azul);
+    padding: 0;
+  }
+  .hero-left {
+    padding: 6.5rem 2.5rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 620px;
+    margin: 0 auto;
+  }
+  .hero-mark {
+    width: 64px; height: 64px;
+    margin-bottom: 1.25rem;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
+  }
+  .hero-mark img { width: 100%; height: 100%; object-fit: contain; }
+
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: .5rem;
+    background: rgba(212,184,126,.08);
+    border: 1px solid rgba(212,184,126,.28);
+    color: var(--oro-md);
+    font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    padding: .5rem 1rem; border-radius: 100px;
+    width: fit-content; margin-bottom: 1.75rem;
+  }
+  .hero-badge .pulse { width: 6px; height: 6px; background: var(--oro-lc); border-radius: 50%; animation: blink 2s infinite; }
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.25} }
+  @media (prefers-reduced-motion: reduce) { .hero-badge .pulse { animation: none; } }
+
+  .hero-left h1 {
+    font-size: clamp(2.1rem, 4.2vw, 3.1rem);
+    color: var(--crema);
+    margin-bottom: 1.25rem;
+  }
+  .hero-left h1 em { font-style: normal; color: var(--oro-lc); }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: rgba(233,221,195,.85);
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+    max-width: 500px;
+  }
+
+  .hero-right {
+    position: relative;
+    background: var(--azul-dk);
+    overflow: hidden;
+  }
+  .hero-right img {
+    width: 100%; height: 100%;
+    object-fit: cover; object-position: top center;
+    min-height: 340px;
+  }
+  .hero-right::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to right, var(--azul) 0%, rgba(38,53,73,0) 18%);
+  }
+  .hero-right::before {
+    content: '';
+    position: absolute; left: 0; right: 0; bottom: 0; height: 40%;
+    background: linear-gradient(to top, rgba(15,26,36,.55), transparent);
+    z-index: 1;
+  }
+  .hero-caption {
+    position: absolute; bottom: 1.5rem; left: 1.75rem; right: 1.75rem;
+    z-index: 2;
+    font-size: .72rem; letter-spacing: .1em; text-transform: uppercase;
+    color: var(--oro-lc);
+  }
+
+  .hero-photo-mobile { display: none; }
+
+  @media (max-width: 900px) {
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 2.5rem 1.5rem 3rem; max-width: 100%; }
+    .hero-photo-mobile {
+      display: block;
+      margin: 0 0 2rem;
+      border-radius: 10px;
+      overflow: hidden;
+      border: 1px solid rgba(212,184,126,.2);
+    }
+    .hero-photo-mobile img { width: 100%; height: auto; max-height: 46vh; object-fit: cover; object-position: top center; }
+  }
+
+  /* ══════════════════════════
+     PAS BLOCK
+  ══════════════════════════ */
+  #pas { background: var(--terra); padding: 4.5rem 1.5rem; }
+  #pas p {
+    font-size: clamp(1.05rem, 2vw, 1.3rem);
+    line-height: 1.65;
+    color: rgba(233,221,195,.9);
+    margin-bottom: 1.4rem;
+  }
+  #pas p:last-child { margin-bottom: 0; }
+
+  /* ══════════════════════════
+     TESTIMONIOS
+  ══════════════════════════ */
+  .testimonios { background: var(--azul); }
+  .testi-header { text-align: center; margin-bottom: 3rem; }
+  .testi-header h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--crema); }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .testi-card {
+    background: var(--azul-dk);
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(212,184,126,.14);
+    transition: transform .25s ease-out, box-shadow .25s ease-out;
+  }
+  .testi-card:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(0,0,0,.28); }
+  .testi-card__badge {
+    display: flex; align-items: center; gap: .6rem;
+    padding: .9rem 1.1rem;
+    background: rgba(255,255,255,.03);
+    border-bottom: 1px solid rgba(212,184,126,.12);
+    font-size: .74rem; letter-spacing: .03em; color: rgba(233,221,195,.75);
+  }
+  .testi-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .testi-dot--mimi { background: var(--verde); }
+  .testi-dot--ale { background: var(--terra); }
+  .testi-card img { width: 100%; height: auto; }
+  .testi-card--quote { padding: 1.75rem; display: flex; flex-direction: column; justify-content: center; }
+  .testi-card--quote p { font-family: 'Raleway', sans-serif; font-size: 1rem; font-style: italic; line-height: 1.6; color: var(--crema); margin-bottom: .9rem; }
+  .testi-card--quote span { font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--oro-md); }
+
+  .testi-person { display: flex; align-items: center; gap: .9rem; margin-bottom: 1.1rem; }
+  .testi-avatar {
+    width: 54px; height: 54px; flex-shrink: 0;
+    border-radius: 50%; overflow: hidden;
+    background: rgba(212,184,126,.14);
+    border: 1px solid rgba(212,184,126,.32);
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'Michelia', Georgia, serif; font-size: 1.2rem; color: var(--oro-lc);
+  }
+  .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
+  .testi-name { font-family: 'Michelia', Georgia, serif; font-size: 1.02rem; color: var(--crema); margin-bottom: .15rem; }
+  .testi-role { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--oro-md); }
+
+  .testimonios--light { background: var(--crema); }
+  .testimonios--light .testi-header h2 { color: var(--azul); }
+  .testimonios--light .label { color: var(--terra); }
+  .testimonios--light .label::before,
+  .testimonios--light .label::after { background: var(--terra); opacity: .4; }
+  .testimonios--light .testi-card { background: var(--crema-dk); border-color: rgba(38,53,73,.14); }
+  .testimonios--light .testi-card:hover { box-shadow: 0 16px 40px rgba(38,53,73,.18); }
+  .testimonios--light .testi-name { color: var(--azul); }
+  .testimonios--light .testi-role { color: var(--terra); }
+  .testimonios--light .testi-card--quote p { color: var(--azul-md); }
+  .testimonios--light .testi-avatar { background: rgba(38,53,73,.08); border-color: rgba(38,53,73,.22); color: var(--terra); }
+
+  @media (max-width: 700px) { .testi-grid { grid-template-columns: 1fr; } }
+
+  /* ══════════════════════════
+     PROMESA
+  ══════════════════════════ */
+  #promesa { background: var(--azul-dk); }
+  .promesa-center { max-width: 640px; margin: 0 auto; text-align: center; }
+  .promesa-center .label { justify-content: center; }
+  .promesa-center h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); color: var(--crema); margin-bottom: 2.25rem; }
+  .promesa-list { text-align: left; margin-bottom: 2.5rem; }
+  .promesa-item { display: flex; gap: .9rem; margin-bottom: 1.6rem; align-items: flex-start; }
+  .promesa-item .check {
+    flex-shrink: 0; width: 26px; height: 26px; border-radius: 50%;
+    background: rgba(212,184,126,.14); color: var(--oro-lc);
+    display: flex; align-items: center; justify-content: center;
+    font-size: .85rem; margin-top: .1rem;
+  }
+  .promesa-item p { font-size: 1.02rem; line-height: 1.6; color: rgba(233,221,195,.9); }
+  .promesa-center .btn { max-width: 380px; margin: 0 auto; }
+  .promesa-center .event-meta { justify-content: center; }
+
+  /* ══════════════════════════
+     QUIENES SOMOS
+  ══════════════════════════ */
+  #somos { background: var(--azul); }
+  .somos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; margin-top: 2.5rem; }
+  .somos-card { text-align: center; }
+  .somos-photo {
+    width: 100%; aspect-ratio: 4/5; border-radius: 10px; overflow: hidden;
+    margin-bottom: 1.25rem; border: 1px solid rgba(212,184,126,.2);
+  }
+  .somos-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .somos-card h3 { font-size: 1.5rem; color: var(--oro-lc); margin-bottom: .6rem; }
+  .somos-card p { font-size: .95rem; line-height: 1.65; color: rgba(233,221,195,.85); text-align: left; }
+  .somos-quote {
+    margin-top: 3rem; text-align: center; max-width: 640px; margin-left: auto; margin-right: auto;
+    padding-top: 2.5rem; border-top: 1px solid rgba(212,184,126,.18);
+  }
+  .somos-quote p { font-family: 'Michelia', Georgia, serif; font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-style: italic; color: var(--crema); line-height: 1.5; margin-bottom: .75rem; }
+  .somos-quote span { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--oro-md); }
+
+  @media (max-width: 700px) { .somos-grid { grid-template-columns: 1fr; } }
+
+  /* ══════════════════════════
+     FAQ
+  ══════════════════════════ */
+  #faq { background: var(--azul-dk); }
+  .faq-item {
+    border-bottom: 1px solid rgba(212,184,126,.15);
+  }
+  .faq-item:first-child { border-top: 1px solid rgba(212,184,126,.15); }
+  .faq-q {
+    width: 100%; text-align: left;
+    background: none; border: none; cursor: pointer;
+    padding: 1.4rem .25rem; min-height: 44px;
+    display: flex; justify-content: space-between; align-items: center; gap: 1rem;
+    font-family: 'Raleway', sans-serif; font-size: 1.02rem; font-weight: 600; color: var(--crema);
+  }
+  .faq-q:focus-visible { outline: 2px solid var(--oro-lc); outline-offset: 2px; }
+  .faq-q .plus { font-family: 'Michelia', Georgia, serif; font-size: 1.4rem; color: var(--oro-md); transition: transform .25s ease-out; flex-shrink: 0; }
+  .faq-item.is-open .faq-q .plus { transform: rotate(45deg); }
+  .faq-a {
+    max-height: 0; overflow: hidden;
+    transition: max-height .3s ease-out;
+  }
+  .faq-a p { padding: 0 .25rem 1.4rem; font-size: .95rem; line-height: 1.65; color: rgba(233,221,195,.82); max-width: 640px; }
+
+  /* ── FOOTER ── */
+  footer { background: var(--azul-dk); padding: 2.5rem 1.5rem; text-align: center; border-top: 1px solid rgba(212,184,126,.1); }
+  footer p { font-size: .78rem; color: rgba(233,221,195,.4); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     1. HERO
+═══════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-mark"><img src="../imagens/icono.png" alt="Mujer Alquímica Digital"></div>
+    <div class="hero-badge"><span class="pulse"></span> Masterclass en vivo · Gratis</div>
+    <h1 class="reveal">Cómo dar <em>el primer paso en redes sociales</em> para mostrar lo que ya sabes hacer, sin esperar a sentirte lista</h1>
+    <p class="hero-sub reveal">Masterclass <strong>para mujeres con negocios de bienestar</strong> que llevan tiempo postergando la presentación de su servicio, ya sea por miedo a exponerse o por no saber por dónde empezar.</p>
+
+    <div class="event-meta reveal">
+      <span><span class="diamond">◆</span> Miércoles 19 de agosto</span>
+      <span><span class="diamond">◆</span> 4:30pm Arizona · 6:30pm Colombia</span>
+      <span><span class="diamond">◆</span> En vivo por Zoom</span>
+    </div>
+
+    <div class="hero-photo-mobile reveal">
+      <img src="../imagens/Mimi-Ale-1.jpeg" alt="Mimi y Ale, fundadoras de Mujer Alquímica Digital">
+    </div>
+
+    <form class="form-wrap reveal" id="form-hero" action="https://el-primer-paso-mad.netlify.app/subscribe" method="POST" novalidate>
+      <p class="form-wrap__title">Regístrate, es gratis</p>
+      <div class="form-fields">
+        <div class="form-group">
+          <label for="nombre-hero">Tu nombre</label>
+          <input type="text" id="nombre-hero" name="nombre" placeholder="¿Cómo te gusta que te llamen?" autocomplete="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email-hero">Tu email</label>
+          <input type="email" id="email-hero" name="email" placeholder="El correo que revisas más seguido" autocomplete="email" required>
+        </div>
+        <div class="form-group">
+          <label for="whatsapp-hero">Tu WhatsApp (opcional)</label>
+          <input type="tel" id="whatsapp-hero" name="whatsapp" placeholder="Para enviarte el recordatorio" autocomplete="tel">
+        </div>
+        <button type="submit" class="btn">Quiero mi lugar</button>
+        <p class="form-privacy">Tu información está segura. Sin spam, nunca.</p>
+      </div>
+    </form>
+  </div>
+  <div class="hero-right">
+    <img src="../imagens/Mimi-Ale-1.jpeg" alt="Mimi y Ale, fundadoras de Mujer Alquímica Digital">
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     2. BLOQUE CORTO (PAS)
+═══════════════════════════════════════ -->
+<section id="pas">
+  <div class="container-narrow">
+    <p class="reveal"><span class="diamond" style="margin-right:.6rem;">◆</span>Abres Instagram, te quedas mirando la pantalla en blanco, y lo cierras sin publicar nada.</p>
+    <p class="reveal"><span class="diamond" style="margin-right:.6rem;">◆</span>Grabas el video, lo ves, lo borras. Y así llevas semanas.</p>
+    <p class="reveal"><span class="diamond" style="margin-right:.6rem;">◆</span>Tienes el caption escrito, el dedo sobre publicar, y algo en el cuerpo dice no todavía.</p>
+    <p class="reveal"><span class="diamond" style="margin-right:.6rem;">◆</span>Cada vez que piensas en aparecer en cámara, algo se aprieta adentro y lo dejas para mañana.</p>
+    <p class="reveal" style="color:#fff;">En esta clase en vivo vamos a encontrar qué te está frenando de verdad.</p>
+    <p class="reveal"><span style="color: var(--oro-lc);">Vas a salir con el primer paso concreto para</span> <strong style="color:#fff;">empezar a mostrarte en redes sociales sin esperar estar lista</strong>.</p>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     3. TESTIMONIOS
+═══════════════════════════════════════ -->
+<section class="testimonios testimonios--light">
+  <div class="container">
+    <div class="testi-header reveal">
+      <p class="label"><span class="diamond">◆</span> Ellas ya cruzaron este umbral <span class="diamond">◆</span></p>
+      <h2>Lo que viven las mujeres que trabajan con nosotras</h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal" aria-label="Testimonio de clienta">
+        <img src="../Testimonios/testi-4-ale.png" alt="Testimonio: no se trata solo del marketing digital o las herramientas, sino de unir esas herramientas con tu ser." loading="lazy">
+      </article>
+      <article class="testi-card testi-card--quote reveal" aria-label="Testimonio de Luisa">
+        <div class="testi-person">
+          <div class="testi-avatar"><img src="../Testimonios/Luisa.jpeg" alt="Luisa"></div>
+          <div>
+            <p class="testi-name">Luisa</p>
+            <span class="testi-role">Masterclass anterior</span>
+          </div>
+        </div>
+        <p>"Esto es una clase maravillosa, justo porque siempre tenemos la información por separado, y es difícil avanzar así. Una clase muy completa, justo desde el sentir."</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     4. FORM + PROMESA
+═══════════════════════════════════════ -->
+<section id="promesa">
+  <div class="container promesa-center reveal">
+    <p class="label"><span class="diamond">◆</span> Lo que te llevas en 1h 30m <span class="diamond">◆</span></p>
+    <h2>De esta masterclass</h2>
+    <div class="promesa-list">
+      <div class="promesa-item">
+        <span class="check">✓</span>
+        <p><strong>Vas a identificar qué es exactamente lo que te frena.</strong><br>No "el miedo a exponerte" en general. El bloqueo específico tuyo, el que aparece cuando abres la app y te quedas paralizada.</p>
+      </div>
+      <div class="promesa-item">
+        <span class="check">✓</span>
+        <p><strong>Vas a salir con tu primer paso concreto.</strong><br>No una lista de tareas genérica. Una acción real, tuya, que puedas hacer esta semana sin necesitar más preparación.</p>
+      </div>
+      <div class="promesa-item">
+        <span class="check">✓</span>
+        <p><strong>Vas a entender que lo que tienes hoy ya es suficiente para empezar.</strong><br>No cuando tengas mejor cámara, mejor edición o más seguridad. Con lo que eres y tienes ahora mismo.</p>
+      </div>
+      <div class="promesa-item">
+        <span class="check">✓</span>
+        <p><strong>Vas a entender que un negocio no se cae por el algoritmo, se cae por falta de base.</strong><br>No se trata de aprender a editar mejor tus videos. Se trata de tu energía y de aprender a sostenerte por dentro, para que mostrar tu trabajo se sienta natural, constante y real, semana tras semana, sin apagarte a la tercera publicación ni drenarte en el intento.</p>
+      </div>
+    </div>
+
+    <p style="font-weight: 700; font-size: 1.05rem; color: var(--oro-lc); margin-bottom: 1.25rem;">Es gratis y en vivo. Pero los cupos son limitados. Separa el tuyo hoy.</p>
+    <a href="#hero" class="btn">Quiero entrar a la clase</a>
+    <div class="event-meta">
+      <span><span class="diamond">◆</span> Miércoles 19 de agosto</span>
+      <span><span class="diamond">◆</span> 4:30pm Arizona · 6:30pm Colombia</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     5. TESTIMONIOS
+═══════════════════════════════════════ -->
+<section class="testimonios">
+  <div class="container">
+    <div class="testi-header reveal">
+      <p class="label"><span class="diamond">◆</span> Más resultados reales <span class="diamond">◆</span></p>
+      <h2>Y lo que pasa después, cuando dan el paso</h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal" aria-label="Testimonio de clienta">
+        <img src="../Testimonios/testi-5-ale.png" alt="Testimonio: gracias a las sesiones, logré organizarme un poco más en mis ideas y orientar mejor mi mensaje de propósito hacia mi misión." loading="lazy">
+      </article>
+      <article class="testi-card reveal" aria-label="Testimonio de clienta">
+        <img src="../Testimonios/testi-6-ale.png" alt="Testimonio: las sesiones de claridad con Alejandra le permitieron abrir su mente al uso de la tecnología a favor de su servicio." loading="lazy">
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     6. QUIÉNES TE ACOMPAÑARÁN
+═══════════════════════════════════════ -->
+<section id="somos">
+  <div class="container">
+    <div class="testi-header reveal">
+      <p class="label"><span class="diamond">◆</span> Tus facilitadoras <span class="diamond">◆</span></p>
+      <h2>Quiénes te acompañarán en esta masterclass</h2>
+    </div>
+    <div class="somos-grid">
+      <div class="somos-card reveal">
+        <div class="somos-photo"><img src="../imagens/mimi-frente.jpeg" alt="Mimi, terapeuta somática y facilitadora de Mujer Alquímica Digital"></div>
+        <h3 class="michelia">Mimi</h3>
+        <p>Terapeuta especializada en astrología, trabajo somático, sagrado femenino y procesos de transformación profunda. Acompaña a mujeres a identificar y soltar lo que las paraliza frente a la pantalla. Mimi sabe que el problema no es no saber qué publicar. Es lo que pasa en el cuerpo justo antes de hacerlo.</p>
+      </div>
+      <div class="somos-card reveal">
+        <div class="somos-photo"><img src="../imagens/Ale-traje-negro.PNG" alt="Ale, estratega de marca y facilitadora de Mujer Alquímica Digital"></div>
+        <h3 class="michelia">Ale</h3>
+        <p>Publicista y estratega creativa especializada en marca, comunicación y arquitectura de negocio digital. Acompaña a emprendedoras del bienestar a encontrar su voz, estructurar su mensaje y construir un negocio que las represente auténticamente. Para ella el negocio es una extensión de quien eres, no hay estructura sostenible que no empiece desde adentro.</p>
+      </div>
+    </div>
+    <div class="somos-quote reveal">
+      <p>"La espiritualidad sin estructura es caos. La visibilidad sin autoridad es solo ruido."</p>
+      <span>— Mimi y Ale</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     7. FAQ
+═══════════════════════════════════════ -->
+<section id="faq">
+  <div class="container-narrow">
+    <div class="testi-header reveal">
+      <p class="label"><span class="diamond">◆</span> Antes de registrarte <span class="diamond">◆</span></p>
+      <h2>Preguntas frecuentes</h2>
+    </div>
+
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">¿La clase es gratis? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Sí, completamente. No hay ningún costo por entrar ni por quedarte hasta el final.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">¿Va a haber grabación? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Sí. Después de la clase te enviamos el replay, así que si no llegas a conectarte en vivo, igual puedes verla.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">¿Para quién es esta clase? <span class="plus">+</span></button>
+      <div class="faq-a"><p>Para ti si tienes un negocio de bienestar y llevas tiempo sin mostrarlo. No importa si nunca has publicado nada o si lo intentaste y lo dejaste a medias.</p></div>
+    </div>
+    <div class="faq-item reveal">
+      <button class="faq-q" aria-expanded="false">¿Necesito saber algo antes de entrar? <span class="plus">+</span></button>
+      <div class="faq-a"><p>No. No necesitas tener redes armadas, ni contenido grabado, ni un plan. Solo necesitas llegar a la clase en vivo.</p></div>
+    </div>
+
+    <a href="#hero" class="btn reveal" style="max-width: 380px; margin: 3rem auto 0;">Quiero mi cupo para la masterclass</a>
+  </div>
+</section>
+
+<footer>
+  <div class="hero-mark" style="margin: 0 auto 1rem;"><img src="../imagens/icono.png" alt="Mujer Alquímica Digital"></div>
+  <p>© 2026 Mujer Alquímica Digital</p>
+</footer>
+
+<script>
+  // Scroll reveal
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach(function(el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function(el) { el.classList.add('is-visible'); });
+  }
+
+  // FAQ accordion
+  document.querySelectorAll('.faq-q').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var answer = item.querySelector('.faq-a');
+      var isOpen = item.classList.contains('is-open');
+
+      document.querySelectorAll('.faq-item.is-open').forEach(function(openItem) {
+        if (openItem !== item) {
+          openItem.classList.remove('is-open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+          openItem.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('is-open');
+        answer.style.maxHeight = null;
+        btn.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('is-open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+</script>
+
+</body>
+</html>
