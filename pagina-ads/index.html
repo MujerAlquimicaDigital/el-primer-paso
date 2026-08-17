@@ -437,9 +437,129 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   footer { background: var(--azul-dk); padding: 2.5rem 1.5rem; text-align: center; border-top: 1px solid rgba(212,184,126,.1); }
   footer p { font-size: .78rem; color: rgba(233,221,195,.4); }
 
+  /* ── ANNOUNCEMENT BAR (cronómetro 1 · tope de página) ── */
+  .annbar {
+    background: var(--oro-md);
+    min-height: 44px;
+    display: flex; align-items: center; justify-content: center;
+    gap: 14px; padding: 0 16px;
+    font-family: 'Raleway', sans-serif;
+    font-size: .75rem; font-weight: 700;
+    color: var(--azul-dk);
+    letter-spacing: .07em; text-transform: uppercase;
+  }
+  .annbar__dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--azul-dk); flex-shrink: 0;
+    animation: blink 1.4s infinite;
+  }
+  .annbar__label-full { opacity: .85; }
+  .annbar__label-short { display: none; opacity: .85; }
+  .annbar__clock { display: flex; gap: 6px; align-items: baseline; }
+  .annbar__unit { display: flex; align-items: baseline; gap: 2px; }
+  .annbar__num { font-size: .85rem; font-weight: 700; font-variant-numeric: tabular-nums; }
+  .annbar__clock small { font-size: .62rem; opacity: .7; }
+  @media (max-width: 540px) {
+    .annbar__label-full { display: none; }
+    .annbar__label-short { display: inline; }
+  }
+
+  /* ── COUNTDOWN CARD (cronómetro 2 · después de "lo que te llevas") ── */
+  .countdown-card { background: var(--azul); padding: 40px 24px; }
+  .countdown-card__inner {
+    max-width: 880px; margin: 0 auto;
+    display: flex; align-items: center;
+    justify-content: space-between; gap: 40px;
+    background: rgba(0,0,0,.35);
+    border: 1px solid rgba(212,184,126,.2);
+    border-radius: 10px;
+    padding: 36px 48px;
+  }
+  .countdown-card__left { flex: 1; }
+  .countdown-card__badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: .68rem; font-weight: 700;
+    letter-spacing: .12em; text-transform: uppercase;
+    color: var(--oro-lc);
+    border: 1px solid rgba(247,215,149,.35);
+    border-radius: 999px; padding: 4px 14px; margin-bottom: 16px;
+  }
+  .countdown-card__badge::before {
+    content: ''; width: 7px; height: 7px; border-radius: 50%;
+    background: var(--oro-lc);
+    animation: blink 1.4s infinite;
+  }
+  .countdown-card__title {
+    font-family: 'Michelia', Georgia, serif; font-size: 1.55rem;
+    color: var(--crema); margin-bottom: 6px;
+  }
+  .countdown-card__sub { font-size: .88rem; color: rgba(233,221,195,.6); }
+  .countdown-digits { display: flex; gap: 10px; flex-shrink: 0; }
+  .digit-box {
+    background: rgba(0,0,0,.5);
+    border: 1px solid rgba(212,184,126,.22);
+    border-radius: 8px;
+    padding: 14px 18px; text-align: center; min-width: 68px;
+  }
+  .digit-box span {
+    display: block; font-size: 2rem; font-weight: 700;
+    color: var(--oro-lc); line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .digit-box small {
+    display: block; font-size: .58rem;
+    letter-spacing: .1em; text-transform: uppercase;
+    color: rgba(212,184,126,.55); margin-top: 6px;
+  }
+  @media (max-width: 767px) {
+    .countdown-card__inner {
+      flex-direction: column; align-items: center;
+      text-align: center; padding: 28px 20px;
+    }
+    .digit-box { min-width: 58px; padding: 12px 12px; }
+    .digit-box span { font-size: 1.7rem; }
+  }
+
+  /* ── CTA COMPACT COUNTDOWN (cronómetro 3 · antes del CTA final) ── */
+  .cta-countdown {
+    display: flex; align-items: center; justify-content: center;
+    gap: 12px; flex-wrap: wrap;
+    background: rgba(151,165,133,.1);
+    border: 1px solid rgba(151,165,133,.28);
+    border-radius: 999px; padding: 10px 28px;
+    margin: 0 auto 1.75rem; max-width: 540px;
+    font-size: .74rem; font-weight: 700;
+    color: #fff; letter-spacing: .06em; text-transform: uppercase;
+  }
+  .cta-countdown__dot {
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--verde); flex-shrink: 0;
+    animation: blink 1.4s infinite;
+  }
+  .cta-countdown__label { color: rgba(255,255,255,.8); }
+  .cta-countdown__units { display: flex; gap: 8px; align-items: baseline; }
+  .cta-countdown__units span { display: flex; align-items: baseline; gap: 2px; }
+  .cta-countdown__units strong { color: #fff; font-variant-numeric: tabular-nums; font-size: .88rem; }
+  .cta-countdown__units small { font-size: .6rem; color: rgba(255,255,255,.55); }
+
 </style>
 </head>
 <body>
+
+<!-- ═══════════════════════════════════════
+     ANNOUNCEMENT BAR — cronómetro 1
+═══════════════════════════════════════ -->
+<div class="annbar" id="annbar" role="banner" aria-label="Cuenta regresiva">
+  <span class="annbar__dot" aria-hidden="true"></span>
+  <span class="annbar__label-full">Inicia el 19 de agosto · 6:30 PM Colombia · Nos vemos en:</span>
+  <span class="annbar__label-short">Inicia el 19 de agosto:</span>
+  <div class="annbar__clock" aria-live="off">
+    <span class="annbar__unit"><span class="annbar__num" id="ann-d">00</span><small>d</small></span>
+    <span class="annbar__unit"><span class="annbar__num" id="ann-h">00</span><small>h</small></span>
+    <span class="annbar__unit"><span class="annbar__num" id="ann-m">00</span><small>m</small></span>
+    <span class="annbar__unit"><span class="annbar__num" id="ann-s">00</span><small>s</small></span>
+  </div>
+</div>
 
 <!-- ═══════════════════════════════════════
      1. HERO
@@ -563,6 +683,25 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
 </section>
 
 <!-- ═══════════════════════════════════════
+     CRONÓMETRO 2 · después de "lo que te llevas"
+═══════════════════════════════════════ -->
+<section class="countdown-card" aria-label="Cuenta regresiva al inicio">
+  <div class="countdown-card__inner">
+    <div class="countdown-card__left">
+      <span class="countdown-card__badge">Inicia el 19 de agosto</span>
+      <p class="countdown-card__title">Última oportunidad de inscripción.</p>
+      <p class="countdown-card__sub">Nos vemos en:</p>
+    </div>
+    <div class="countdown-digits" aria-live="off">
+      <div class="digit-box"><span id="sol-d">00</span><small>DÍAS</small></div>
+      <div class="digit-box"><span id="sol-h">00</span><small>HORAS</small></div>
+      <div class="digit-box"><span id="sol-m">00</span><small>MIN</small></div>
+      <div class="digit-box"><span id="sol-s">00</span><small>SEG</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
      5. TESTIMONIOS
 ═══════════════════════════════════════ -->
 <section class="testimonios">
@@ -637,7 +776,17 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
       <div class="faq-a"><p>No. No necesitas tener redes armadas, ni contenido grabado, ni un plan. Solo necesitas llegar a la clase en vivo.</p></div>
     </div>
 
-    <a href="#hero" class="btn reveal" style="max-width: 380px; margin: 3rem auto 0;">Quiero mi cupo para la masterclass</a>
+    <div class="cta-countdown" aria-live="off" style="margin-top: 3rem;">
+      <span class="cta-countdown__dot" aria-hidden="true"></span>
+      <span class="cta-countdown__label">Comienza el 19 de agosto:</span>
+      <div class="cta-countdown__units">
+        <span><strong id="cta-d">00</strong><small>d</small></span>
+        <span><strong id="cta-h">00</strong><small>h</small></span>
+        <span><strong id="cta-m">00</strong><small>m</small></span>
+        <span><strong id="cta-s">00</strong><small>s</small></span>
+      </div>
+    </div>
+    <a href="#hero" class="btn reveal" style="max-width: 380px; margin: 0 auto;">Quiero mi cupo para la masterclass</a>
   </div>
 </section>
 
@@ -689,6 +838,30 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
       }
     });
   });
+
+  // ── Cronómetro — 19 de agosto 2026, 6:30 PM Colombia (UTC-5) ──
+  (function() {
+    var target = new Date('2026-08-19T18:30:00-05:00').getTime();
+    function pad(n) { return n < 10 ? '0' + n : '' + n; }
+    function tick() {
+      var diff = Math.max(0, target - Date.now());
+      var d = Math.floor(diff / 86400000);
+      var h = Math.floor(diff / 3600000) % 24;
+      var m = Math.floor(diff / 60000) % 60;
+      var s = Math.floor(diff / 1000) % 60;
+      [['ann-d','ann-h','ann-m','ann-s'],
+       ['sol-d','sol-h','sol-m','sol-s'],
+       ['cta-d','cta-h','cta-m','cta-s']].forEach(function(ids) {
+        var el;
+        el = document.getElementById(ids[0]); if (el) el.textContent = pad(d);
+        el = document.getElementById(ids[1]); if (el) el.textContent = pad(h);
+        el = document.getElementById(ids[2]); if (el) el.textContent = pad(m);
+        el = document.getElementById(ids[3]); if (el) el.textContent = pad(s);
+      });
+    }
+    tick();
+    setInterval(tick, 1000);
+  })();
 
 </script>
 
