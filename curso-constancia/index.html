@@ -36,16 +36,9 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Prata&display=swap" rel="stylesheet">
 
 <style>
-  @font-face {
-    font-family: 'Michelia';
-    src: url('/assets/Michelia.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-  }
 
   :root {
     --verde:    #97a585;
@@ -73,7 +66,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     -webkit-font-smoothing: antialiased;
   }
 
-  .michelia { font-family: 'Michelia', Georgia, serif; }
+  .michelia { font-family: 'Prata', Georgia, serif; }
 
   .gold-text {
     background: var(--grad-oro);
@@ -111,7 +104,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   .container { max-width: 1100px; margin: 0 auto; }
   .container-narrow { max-width: 720px; margin: 0 auto; }
 
-  h1, h2, h3 { font-family: 'Michelia', Georgia, serif; font-weight: normal; line-height: 1.2; }
+  h1, h2, h3 { font-family: 'Prata', Georgia, serif; font-weight: normal; line-height: 1.2; }
 
   /* ── REVEAL ON SCROLL ── */
   .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease-out, transform .7s ease-out; }
@@ -194,7 +187,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     background: rgba(211,189,142,.12);
     border: 1px solid rgba(211,189,142,.4);
     color: var(--crema-dk);
-    font-size: .66rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+    font-size: .76rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
     padding: .5rem 1rem; border-radius: 100px;
     width: fit-content; margin-bottom: 1.75rem;
   }
@@ -298,7 +291,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     text-align: left;
   }
   #mecanismo .destacado {
-    font-family: 'Michelia', Georgia, serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: clamp(1.15rem, 2.2vw, 1.4rem);
     font-style: italic;
     color: var(--azul-dk);
@@ -320,7 +313,15 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   }
   #programa .label { color: var(--terra); }
   #programa .label::before, #programa .label::after { background: var(--terra); opacity: .4; }
-  #programa h2 { color: var(--azul); font-weight: 700; text-align: center; margin-bottom: 3rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  #programa h2 { color: var(--azul); font-weight: 700; text-align: center; margin-bottom: 1rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .programa-formato {
+    text-align: center;
+    color: var(--terra);
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    font-size: clamp(.95rem, 1.7vw, 1.08rem);
+    margin-bottom: 3rem;
+  }
   .modulo {
     position: relative;
     overflow: hidden;
@@ -337,7 +338,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   .modulo-num {
     position: absolute;
     top: 1.25rem; right: 1.25rem;
-    font-family: 'Michelia', Georgia, serif;
+    font-family: 'Prata', Georgia, serif;
     font-size: 6rem;
     line-height: 1;
     opacity: .17;
@@ -385,10 +386,41 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   .modulo--4 .contraste { border-left-color: var(--terra); background: rgba(164,100,72,.09); }
   .modulo-entrega { display: flex; align-items: flex-start; gap: .6rem; font-size: .92rem; color: var(--azul); font-weight: 600; }
 
+  .modulo--formato { background: var(--crema-dk); }
+  .formato-item { display: flex; align-items: flex-start; gap: .7rem; margin-bottom: .9rem; position: relative; z-index: 1; }
+  .formato-item:last-of-type { margin-bottom: 1.1rem; }
+  .formato-item .bullet { color: var(--terra); font-size: .7rem; line-height: 1.7; flex-shrink: 0; }
+  .formato-item p { font-size: .96rem; line-height: 1.6; color: var(--azul-md); }
+  .formato-item p strong { color: var(--azul); }
+
   /* ══════════════════════════
      RESULTADO / PROMESA
   ══════════════════════════ */
   #resultado { background: var(--azul-dk); }
+  #resumen {
+    background-color: var(--crema);
+    background-image: linear-gradient(rgba(233,221,195,.85), rgba(233,221,195,.85)), url('/imagens/textura.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+  }
+  #resumen .label { color: var(--terra); }
+  #resumen .label::before, #resumen .label::after { background: var(--terra); opacity: .4; }
+  #resumen h2 { color: var(--azul); font-weight: 700; text-align: center; margin-bottom: 2.5rem; font-size: clamp(1.6rem, 3vw, 2.2rem); }
+  .resumen-list { display: flex; flex-direction: column; gap: 1.1rem; }
+  .resumen-item {
+    display: flex; gap: .9rem; align-items: flex-start;
+    background: var(--crema-dk);
+    border-radius: 10px;
+    padding: 1.25rem 1.5rem;
+    border: 1px solid rgba(38,53,73,.1);
+    border-left: 5px solid var(--terra);
+  }
+  .resumen-item .resumen-check { font-size: 1.15rem; flex-shrink: 0; line-height: 1.5; }
+  .resumen-item p { font-size: 1rem; line-height: 1.6; color: var(--azul-md); }
+  .resumen-item p strong { color: var(--azul); }
+  #resumen .resultado-cierre { color: var(--terra); margin-top: 2.5rem; margin-bottom: 0; }
   .resultado-center { max-width: 640px; margin: 0 auto; text-align: center; }
   .resultado-center .label { justify-content: center; }
   .resultado-center h2 { font-size: clamp(1.5rem, 2.8vw, 2rem); color: var(--crema); margin-bottom: 2.25rem; }
@@ -401,7 +433,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     font-size: .85rem; margin-top: .1rem;
   }
   .resultado-item p { font-size: 1.02rem; line-height: 1.6; color: rgba(233,221,195,.9); }
-  .resultado-cierre { font-family: 'Michelia', Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--oro-lc); text-align: center; margin-top: 2.5rem; }
+  .resultado-cierre { font-family: 'Prata', Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 2vw, 1.3rem); color: var(--oro-lc); text-align: center; margin-top: 2.5rem; }
 
   /* ══════════════════════════
      QUIENES TE ACOMPAÑAN
@@ -420,7 +452,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     margin-top: 3rem; text-align: center; max-width: 640px; margin-left: auto; margin-right: auto;
     padding-top: 2.5rem; border-top: 1px solid rgba(212,184,126,.18);
   }
-  .somos-quote p { font-family: 'Michelia', Georgia, serif; font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-style: italic; color: var(--crema); line-height: 1.5; margin-bottom: .75rem; }
+  .somos-quote p { font-family: 'Prata', Georgia, serif; font-size: clamp(1.15rem, 2.2vw, 1.5rem); font-style: italic; color: var(--crema); line-height: 1.5; margin-bottom: .75rem; }
   .somos-quote > span { font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--oro-md); }
   .somos-formato {
     margin-top: 2.5rem; text-align: center; font-size: .92rem; color: rgba(233,221,195,.7);
@@ -459,10 +491,10 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     background: rgba(38,53,73,.08);
     border: 1px solid rgba(38,53,73,.22);
     display: flex; align-items: center; justify-content: center;
-    font-family: 'Michelia', Georgia, serif; font-size: 1.2rem; color: var(--terra);
+    font-family: 'Prata', Georgia, serif; font-size: 1.2rem; color: var(--terra);
   }
   .testi-avatar img { width: 100%; height: 100%; object-fit: cover; }
-  .testi-name { font-family: 'Michelia', Georgia, serif; font-size: 1.02rem; color: var(--azul); margin-bottom: .1rem; }
+  .testi-name { font-family: 'Prata', Georgia, serif; font-size: 1.02rem; color: var(--azul); margin-bottom: .1rem; }
   .testi-role { font-size: .68rem; letter-spacing: .06em; text-transform: uppercase; color: var(--terra); }
 
   .testi-card--shot { padding: 0; }
@@ -535,7 +567,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   .oferta-fechas { font-size: 1.06rem; font-weight: 700; color: rgba(233,221,195,.65); margin-bottom: 1.75rem; }
   .oferta-mockup { max-width: 100%; width: 100%; height: auto; margin: 0 auto 2rem; display: block; }
   .oferta-precio-label { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: rgba(233,221,195,.6); margin-bottom: .4rem; }
-  .oferta-precio { font-family: 'Michelia', Georgia, serif; font-size: clamp(2.6rem, 6vw, 3.6rem); color: var(--oro-lc); margin-bottom: 1.75rem; }
+  .oferta-precio { font-family: 'Prata', Georgia, serif; font-size: clamp(2.6rem, 6vw, 3.6rem); color: var(--oro-lc); margin-bottom: 1.75rem; }
   .oferta-urgencia { font-size: .95rem; font-weight: 700; color: var(--oro-lc); margin-top: 1.1rem; }
   .oferta-cuotas { font-size: .82rem; color: rgba(233,221,195,.5); margin-top: .5rem; margin-bottom: 2rem; }
   .garantia-box {
@@ -579,7 +611,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
     font-family: 'Raleway', sans-serif; font-size: 1.02rem; font-weight: 600; color: var(--azul-dk);
   }
   .faq-q:focus-visible { outline: 2px solid var(--terra); outline-offset: 2px; }
-  .faq-q .plus { font-family: 'Michelia', Georgia, serif; font-size: 1.4rem; color: var(--terra); transition: transform .25s ease-out; flex-shrink: 0; }
+  .faq-q .plus { font-family: 'Prata', Georgia, serif; font-size: 1.4rem; color: var(--terra); transition: transform .25s ease-out; flex-shrink: 0; }
   .faq-item.is-open .faq-q .plus { transform: rotate(45deg); }
   .faq-a {
     max-height: 0; overflow: hidden;
@@ -659,6 +691,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
   <div class="container-narrow">
     <p class="label reveal"><span class="diamond">◆</span> El programa <span class="diamond">◆</span></p>
     <h2 class="reveal">Qué vas a vivir en 4 semanas</h2>
+    <p class="programa-formato reveal">Clases grabadas de acceso inmediato + 4 Sesiones en Vivo de 1.5 h + Acompañamiento diario por Grupo Privado de WhatsApp.</p>
 
     <div class="modulo modulo--1 reveal">
       <span class="modulo-num">01</span>
@@ -681,7 +714,7 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
       </div>
       <h3>La Astrología de tu Mensaje y Tu Voz Única</h3>
       <p class="modulo-objetivo"><strong>Objetivo:</strong> descubrir cómo comunica tu energía natural y definir tu estilo sin copiar a nadie.</p>
-      <p class="modulo-desc">Vamos a leer la energía de tu comunicación para entender si tu voz es inspiradora, confrontativa, poética o estructurada. Con esa lectura, armamos la estructura de guiones sencillos para reels y textos que conecten sin dar rodeos.</p>
+      <p class="modulo-desc">No necesitas saber de astrología. No es un curso para aprender a leer cartas astrales, sino para usar tu propia carta natal a tu favor. Analizaremos la energía de tu comunicación (Mercurio) para descubrir si tu voz natural es estructurada, inspiradora, directa o poética, y así crear un estilo de contenido que no te cueste trabajo sostener.</p>
       <p class="contraste"><strong>No copiar el estilo de la cuenta que admiras.</strong> Sí encontrar el tuyo, el que ya traes escrito en tu carta natal y que hasta ahora no habías usado a tu favor.</p>
       <p class="modulo-entrega">🎒 Te llevas: tu Banco de 12 Ideas de Contenido, alineadas a tu mapa energético y listas para grabar o escribir.</p>
     </div>
@@ -711,6 +744,35 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
       <p class="contraste"><strong>No otro post de venta que borras antes de publicar.</strong> Sí un guion, una historia y un post de venta de tu servicio, ya listos para salir a redes.</p>
       <p class="modulo-entrega">🎒 Te llevas: tu Secuencia de Venta Orgánica completa.</p>
     </div>
+
+    <div class="modulo modulo--formato reveal">
+      <div class="modulo-head">
+        <span class="modulo-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="M8 20h8M12 18v2"/></svg></span>
+        <p class="modulo-eyebrow">Cómo funciona</p>
+      </div>
+      <h3>El formato de las 4 semanas</h3>
+      <div class="formato-item">
+        <span class="bullet">◆</span>
+        <p><strong>Clases grabadas y entregables:</strong> alojados en la plataforma de Hotmart (acceso 24/7 desde tu computadora o celular).</p>
+      </div>
+      <div class="formato-item">
+        <span class="bullet">◆</span>
+        <p><strong>Sesiones en vivo:</strong> vía Zoom (quedan grabadas y subidas a Hotmart en menos de 24 horas).</p>
+      </div>
+      <div class="formato-item">
+        <span class="bullet">◆</span>
+        <p><strong>Acompañamiento:</strong> grupo privado en WhatsApp.</p>
+      </div>
+      <div class="formato-item">
+        <span class="bullet">◆</span>
+        <p><strong>Horarios de los en vivo:</strong> 4:30 p.m. Arizona / 6:30 p.m. Colombia.</p>
+      </div>
+      <div class="formato-item">
+        <span class="bullet">◆</span>
+        <p><strong>Fechas:</strong> del 3 al 24 de septiembre (1 sesión por semana, cada jueves).</p>
+      </div>
+      <p class="contraste">Si no puedes estar en vivo, podrás ver la grabación y hacer tus preguntas en el grupo de WhatsApp.</p>
+    </div>
   </div>
 </section>
 
@@ -737,6 +799,38 @@ src="https://www.facebook.com/tr?id=1623967308847840&ev=PageView&noscript=1"
       <div class="resultado-item">
         <span class="check">✓</span>
         <p><strong>La paz de saber que tu voz vale</strong> y que no necesitas actuar como nadie más.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════
+     5B. RESUMEN — QUÉ TE LLEVAS
+═══════════════════════════════════════ -->
+<section id="resumen">
+  <div class="container-narrow">
+    <p class="label reveal"><span class="diamond">◆</span> Resumen <span class="diamond">◆</span></p>
+    <h2 class="reveal">Esto es todo lo que te llevas listo para usar</h2>
+    <div class="resumen-list">
+      <div class="resumen-item reveal">
+        <span class="resumen-check">✅</span>
+        <p><strong>Tablero de Claridad:</strong> Perfil de Instagram optimizado + tus 3 pilares de contenido.</p>
+      </div>
+      <div class="resumen-item reveal">
+        <span class="resumen-check">✅</span>
+        <p><strong>Banco de 12 Ideas:</strong> Diseñado según la astrología de tu voz única.</p>
+      </div>
+      <div class="resumen-item reveal">
+        <span class="resumen-check">✅</span>
+        <p><strong>Calendario Mensual Sostenible:</strong> Todo tu contenido organizado en solo 2 horas a la semana.</p>
+      </div>
+      <div class="resumen-item reveal">
+        <span class="resumen-check">✅</span>
+        <p><strong>Secuencia de Venta Orgánica:</strong> Guion y estructura para ofrecer tu servicio sin pena.</p>
+      </div>
+      <div class="resumen-item reveal">
+        <span class="resumen-check">✅</span>
+        <p><strong>Kit de Desbloqueo Somático:</strong> Audios y ejercicios prácticos de regulación antes de grabar.</p>
       </div>
     </div>
     <p class="resultado-cierre"><span style="font-family: 'Raleway', sans-serif; font-style: normal;">Vas a dejar de preguntarte qué publicar hoy,</span> <strong style="font-weight: 700;">porque ya vas a saber quién eres cuando publicas.</strong></p>
